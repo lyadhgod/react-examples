@@ -2,9 +2,7 @@ import 'server-only'
  
 const dictionaries = {
   "en-US": () => import('./dictionaries/en-US.json')
-    .then((module) => module.default),
-  "en-DK": () => import('./dictionaries/en-US.json')
-    .then((module) => module.default),
+    .then((module) => module.default)
 }
 
 type Locale = keyof typeof dictionaries
