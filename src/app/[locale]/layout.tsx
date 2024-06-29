@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Readonly<{
    
 const inter = Inter({ subsets: ["latin"] })
 
-export default function RootLayout({ children, params }: Readonly<{
+export default function Layout({ children, params }: Readonly<{
     children: React.ReactNode,
     params: Params
 }>) {
