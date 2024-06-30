@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { locales } from "./dictionaries";
  
-export function middleware(request: NextRequest) {
+export function middleware(request: Readonly<NextRequest>) {
   const { pathname } = request.nextUrl
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
